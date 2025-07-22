@@ -3,7 +3,7 @@ import requests
 
 app = Flask(__name__)
 
-API_KEY = "gsk_your_actual_token_here"  # Replace this with your real token
+API_KEY = "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"
 API_URL = "https://api.groq.com/openai/v1/chat/completions"
 MODEL = "llama3-8b-8192"
 
@@ -47,6 +47,3 @@ def manifest():
 @app.route("/static/<path:path>")
 def static_files(path):
     return send_from_directory("static", path)
-
-if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=3000)  # Replit uses port 3000
